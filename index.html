@@ -4,115 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <img src="./img/photo.jpg" alt="Dana Farbak">
+    <div class="inner">
+        <div class="container">
+            <aside class="sidebar">
+                <div class="photo">
+                    <img src="./img/photo.jpg" alt="Dana Farbak">
+                </div>
 
-            <section class="skills">
-                <h2 id="skills">Skills</h2>
-                <ul class="skills-list">
-                    <li>PHP</li>
-                    <li>JS</li>
-                    <li>C</li>
-                    <li>C#</li>
-                    <li>C++</li>
-                    <li>Laravel</li>
-                    <li>Symfony</li>
-                    <li>Vue</li>
-                    <li>React</li>
-                    <li>Git</li>
-                    <li>Docker</li>
-                </ul>
-            </section>
-            <section class="languages">
-                <h2 id="languages">Languages</h2>
-                <ul>
-                    <li>
-                        <label for="languages-ru">Russian</label>
-                        <progress id="languages-ru" max="100" value="100">100%</progress>
-                    </li>
-                    <li>
-                        <label for="languages-eng">English B1-B2</label>
-                        <progress id="languages-eng" max="100" value="75">75%</progress>
-                    </li>
-                </ul>
-            </section>
-            <section class="contacts">
-                <h2>Contacts</h2>
-                <address class="contacts-data">
-                    <ul>
+                <section class="skills">
+                    <h2 id="skills">Skills</h2>
+                    <ul class="skills-list">
+                        <li>PHP</li>
+                        <li>JS</li>
+                        <li>C</li>
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>Laravel</li>
+                        <li>Symfony</li>
+                        <li>Vue</li>
+                        <li>React</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                    </ul>
+                </section>
+                <section class="languages">
+                    <h2 id="languages">Languages</h2>
+                    <ul class="languages-list">
                         <li>
-                            <p>GitHub: <a href="https://github.com/shereoshek">@shereoshek</a></p>
+                            <label for="languages-ru">Russian</label>
+                            <progress id="languages-ru" max="100" value="100">100%</progress>
                         </li>
                         <li>
-                            <p>Telegram: <a href="https://t.me/shereposhek">@shereposhek</a></p>
-                        </li>
-                        <li>
-                            <p>Discord: @shereposhek</p>
+                            <label for="languages-eng">English B1-B2</label>
+                            <progress id="languages-eng" max="100" value="75">75%</progress>
                         </li>
                     </ul>
-                </address>
-            </section>
-        </aside>
-        <main>
-            <header>
-                <h1>Farbak Dana</h1>
-                <p class="role">fullstack-developer</p>
-            </header>
-            <section class="about-me">
-                <h2>About me</h2>
-                <p>My journey into IT began back in my school days when I discovered a web layout course that sparked my passion. Today, I have been continuously learning and growing in the tech field for over 6 years.<br>
-                I have commercial experience as a Fullstack Developer, working on an enterprise B2B platform closely integrated with CI/CD pipelines. My core strengths are a high learning speed and strong adaptability to new technologies and workflows.<br>
-                Currently, my main priorities are <strong>continuous self-development</strong> and <strong>career growth within a forward-thinking engineering team.</strong></p>
-            </section>
-            <section class="experience">
-                <h2>Experience</h2>
-                <ul class="exirience-list">
-                    <li>
-                        <p>Company enterprize-platform | 9 month <span>fullstack-developer</span></p>
-                        <p class="tech-stack"><strong>Tech Stack:</strong> PHP, Laravel, Docker, MySQL, Eloquent, Git.</p></p>
-                    </li>
-                </ul>
-            </section>
-            <section class="education">
-                <h2>Education</h2>
+                </section>
+                <section class="contacts">
+                    <h2>Contacts</h2>
+                    <p class="note">Click on nikname to be redirected (exept discord)</p>
+                    <address class="contacts-data">
+                        <ul>
+                            <li>
+                                <p>GitHub: <a href="https://github.com/shereoshek">@shereoshek</a></p>
+                            </li>
+                            <li>
+                                <p>Telegram: <a href="https://t.me/shereposhek">@shereposhek</a></p>
+                            </li>
+                            <li>
+                                <p>Discord: @shereposhek</p>
+                            </li>
+                        </ul>
+                    </address>
+                </section>
+            </aside>
+            <main>
+                <header>
+                    <h1>Farbak Dana</h1>
+                    <p class="role">fullstack-developer</p>
+                </header>
+                <section class="about-me">
+                    <h2>About me</h2>
+                    <p>My journey into IT began back in my school days when I discovered a web layout course that sparked my passion. Today, I have been continuously learning and growing in the tech field for over 6 years.<br>
+                    I have commercial experience as a Fullstack Developer, working on an enterprise B2B platform closely integrated with CI/CD pipelines. My core strengths are a high learning speed and strong adaptability to new technologies and workflows.<br>
+                    Currently, my main priorities are <strong>continuous self-development</strong> and <strong>career growth within a forward-thinking engineering team.</strong></p>
+                    <hr>
+                </section>
+                <section class="experience">
+                    <h2>Experience</h2>
+                    <ul class="experience-list">
+                        <li>
+                            <p>Company enterprize-platform | 9 month <span>fullstack-developer</span></p>
+                            <p class="tech-stack"><strong>Tech Stack:</strong> PHP, Laravel, Docker, MySQL, Eloquent, Git.</p>
+                        </li>
+                    </ul>
+                    <hr>
+                </section>
+                <section class="education">
+                    <h2>Education</h2>
                     <h3>Perm Aviation Technical College named after A.D. Shvetsov</h3>
                     <p><strong>Associate Degree in Web and Multimedia Application Development</strong></p>
                     <p>Graduated: 2026</p>
-            </section>
-            <section class="code-example">
-                <h2>Code example</h2>
-                <p>User statistics function:</p>
-                <pre><code class="code-expamle">
-public function statistics(){
-    $user = Auth::user();
+                    <hr>
+                </section>
+                <section class="code-example">
+                    <h2>Code example</h2>
+                    <p>User statistics function:</p>
+                    <pre><code class="languuage-php">
+const assert = require("chai").assert;
 
-    $totalCourses = $user->courses()->count();
-    $completedCourses = $user->userCourses()->where('progress_delta', 100)->count();
-    $totalFiles = $user->completedFiles()->where('status', \App\Enums\StatusEnum::COMPLETED->value)->count();
-    $totalTests = $user->testResults()->where('passed', \App\Enums\TestPassedEnum::PASSED->value)->count();
-
-    return response()->json([
-        'total_courses' => $totalCourses,
-        'completed_courses' => $completedCourses,
-        'completion_rate' => $totalCourses>0 ? round(($completedCourses/$totalCourses)*100, 2) : 0,
-        'total_files_completed' => $totalFiles,
-        'total_tests_passed' => $totalTests,
-        'bonus_points' => $user->bonus_points,
-    ]);
-}
-                </code></pre>
-            </section>
-        </main>
+describe("Multiply", () => {
+  it("fixed tests", () => {
+    assert.strictEqual(multiply(1,1), 1);
+    assert.strictEqual(multiply(2,1), 2);
+    assert.strictEqual(multiply(2,2), 4);
+    assert.strictEqual(multiply(3,5), 15); 
+    assert.strictEqual(multiply(5,0), 0);
+    assert.strictEqual(multiply(0,5), 0);
+    assert.strictEqual(multiply(0,0), 0); 
+  });
+});
+                    </code></pre>
+                </section>
+            </main>
+        </div>
         <footer>
-            <div class="rss">
-                <img src="./img/rs-school-logo.svg" alt="rs-school-logo">
-                <p><a href="https://rs.school/ru/courses/javascript">JS fullstack</a></p>
+            <hr class="normal-split-line">
+            <div class="container">
+                <div class="footer_inner">
+                    <div class="rss">
+                        <img src="./img/rs-school-logo.svg" alt="rs-school-logo">
+                        <p><a href="https://rs.school/ru/courses/javascript">JS fullstack</a></p>
+                    </div>
+                    <p>2026</p>
+                    <p><a href="https://github.com/shereoshek/rsschool-cv">GitHub: shereoshek</a></p>
+                </div>
             </div>
-            <p>2026</p>
-            <p><a href="https://github.com/shereoshek/rsschool-cv">GitHub: shereoshek</a></p>
         </footer>
     </div>
 </body>
