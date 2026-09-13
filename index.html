@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="contacts">
+                <section class="contacts" id="contacts">
                     <h2>Contacts</h2>
                     <p class="note">Click on nikname to be redirected (exept discord)</p>
                     <address class="contacts-data">
@@ -65,15 +65,26 @@
                 <header>
                     <h1>Farbak Dana</h1>
                     <p class="role">fullstack-developer</p>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#about-me">About me</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#code-example">Code example</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#languages">Languages</a></li>
+                            <li><a href="#contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
                 </header>
-                <section class="about-me">
+                <section class="about-me" id="about-me">
                     <h2>About me</h2>
                     <p>My journey into IT began back in my school days when I discovered a web layout course that sparked my passion. Today, I have been continuously learning and growing in the tech field for over 6 years.<br>
                     I have commercial experience as a Fullstack Developer, working on an enterprise B2B platform closely integrated with CI/CD pipelines. My core strengths are a high learning speed and strong adaptability to new technologies and workflows.<br>
                     Currently, my main priorities are <strong>continuous self-development</strong> and <strong>career growth within a forward-thinking engineering team.</strong></p>
                     <hr>
                 </section>
-                <section class="experience">
+                <section class="experience" id="experience">
                     <h2>Experience</h2>
                     <ul class="experience-list">
                         <li>
@@ -83,30 +94,34 @@
                     </ul>
                     <hr>
                 </section>
-                <section class="education">
+                <section class="education" id="education">
                     <h2>Education</h2>
                     <h3>Perm Aviation Technical College named after A.D. Shvetsov</h3>
                     <p><strong>Associate Degree in Web and Multimedia Application Development</strong></p>
                     <p>Graduated: 2026</p>
                     <hr>
                 </section>
-                <section class="code-example">
+                <section class="code-example" id="code-example">
                     <h2>Code example</h2>
                     <p>User statistics function:</p>
-                    <pre><code class="languuage-php">
-const assert = require("chai").assert;
+                    <pre><code class="language-php">
+public function statistics(){
+        $user = Auth::user();
 
-describe("Multiply", () => {
-  it("fixed tests", () => {
-    assert.strictEqual(multiply(1,1), 1);
-    assert.strictEqual(multiply(2,1), 2);
-    assert.strictEqual(multiply(2,2), 4);
-    assert.strictEqual(multiply(3,5), 15); 
-    assert.strictEqual(multiply(5,0), 0);
-    assert.strictEqual(multiply(0,5), 0);
-    assert.strictEqual(multiply(0,0), 0); 
-  });
-});
+        $totalCourses = $user->courses()->count();
+        $completedCourses = $user->userCourses()->where('progress_delta', 100)->count();
+        $totalFiles = $user->completedFiles()->where('status', \App\Enums\StatusEnum::COMPLETED->value)->count();
+        $totalTests = $user->testResults()->where('passed', \App\Enums\TestPassedEnum::PASSED->value)->count();
+
+        return response()->json([
+            'total_courses' => $totalCourses,
+            'completed_courses' => $completedCourses,
+            'completion_rate' => $totalCourses>0 ? round(($completedCourses/$totalCourses)*100, 2) : 0,
+            'total_files_completed' => $totalFiles,
+            'total_tests_passed' => $totalTests,
+            'bonus_points' => $user->bonus_points,
+        ]);
+    }
                     </code></pre>
                 </section>
             </main>

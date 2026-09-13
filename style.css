@@ -52,6 +52,28 @@ h1{
     margin-bottom: 25px;
 }
 
+.main-nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: #0c495f;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.main-nav a:hover{
+    border-bottom-color: #0c495f;
+}
+
 main section{
     margin-bottom: 15px;
 }
@@ -186,5 +208,3 @@ progress{
 .note{
     color: rgb(110, 110, 110);
 }
-
-
